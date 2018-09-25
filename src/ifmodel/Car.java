@@ -14,4 +14,9 @@ public Car()
 	this.HorsePower = 340;
 	this.mpg = 12.5;
 }
+
+public void setDistance(double parseDouble)
+{
+	
+}
 }
