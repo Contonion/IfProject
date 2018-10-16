@@ -1,4 +1,6 @@
 package controller;
+import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
 import ifmodel.Car;
 public class IfController
@@ -16,14 +18,56 @@ public class IfController
 	
 	public void start() 
 	{
+		whileandfor();
 		loopy();
+		loopz();
+		
+	}
+	/**
+	 * Does a loop until the user has a certain abount of candy bars
+	 */
+	private void whileandfor() {
+		boolean IsComplete = false;
+		int AmountOfCandy = 0;
+		int AmountNeeded = 10;
+		while(!IsComplete) {
+		AmountOfCandy++;
+		if (AmountOfCandy >= AmountNeeded) {
+		System.out.println("I have " + AmountNeeded + " Candy bars!");
+		IsComplete = true;
+		} else {
+			System.out.println("Im going to go to the store to buy a Caiden Tolman flavored candy bar!");
+		}
+		}
+		
+	}
+	/**
+	 * Another loop that just repeats numbers until it has reached 10
+	 */
+	private void loopz()
+	{
+		int number = 0;
+		boolean LoopDone = false;
+		while(!LoopDone)
+		{
+			number++;
+			if (number >= 10)
+			{
+				LoopDone = true;
+			}
+		}
 	}
 	private void loopy() 
+
 	{
+		
 		//Define variable before loop
 		boolean isDone = false;
 		int count = 0;
 		boolean complete = false;
+		/**
+		 * Has the user create a password, and asks the user for input, and then adds the "Give me Input" to the item, and then 
+		 */
 		
 		String password = JOptionPane.showInputDialog(null, "Create a Password");
 		while(!complete)
@@ -56,6 +100,23 @@ public class IfController
 			
 		}
 	}
+	private void lotsOfRuns()
+	{
+		ArrayList<Run> myRuns = new ArrayList<Run>();
+		
+	}
+	
+	public String toString()
+	{
+		String description = "This is a run";
+		String name = ""
+				+ "Bob";
+		description += " The Run is named " + name;
+		int timeMinutes = 5;
+		description += " and it took " + timeMinutes  + " minutes to run";
+		return description;
+	}
+	
 	private void askUser() {
 		String response = JOptionPane.showInputDialog(null, "Price");
 		Car userRun = new Car();
@@ -94,4 +155,5 @@ public class IfController
 		}
 		return isValid;
 }
+	
 }
